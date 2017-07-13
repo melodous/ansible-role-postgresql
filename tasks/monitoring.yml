@@ -1,0 +1,6 @@
+---
+- name: Install postgresql libs
+  yum: name=postgresql-libs state=present
+
+- name: Install libzbxpgsql
+  yum: name=libzbxpgsql state=present
