@@ -6,6 +6,9 @@
     - "../vars/empty.yml"
   tags: [always]
 
+- include: lvm.yml
+  when: postgresql_lvm
+
 - include: install.yml
   when: ansible_pkg_mgr == "apt"
   tags: [postgresql, postgresql-install]
@@ -32,3 +35,6 @@
 - include: monit.yml
   when: monit_protection is defined and monit_protection == true
   tags: [postgresql, postgresql-monit]
+
+- include: monitoring.yml
+  when: (monitoring|default('true') and postgresql_monitoring)
