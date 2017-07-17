@@ -745,3 +745,5 @@ postgresql_yum_repository_url: "{{ postgresql_yum_repository_base_url }}/{{ post
 postgresql_monitoring: true
 
 postgresql_lvm: false
+
+postgresql_libzbxpgsql_pkg: libzbxpgsql

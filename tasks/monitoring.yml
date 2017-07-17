@@ -3,4 +3,4 @@
   yum: name=postgresql-libs state=present
 
 - name: Install libzbxpgsql
-  yum: name=libzbxpgsql state=present
+  yum: name="{{ postgresql_libzbxpgsql_pkg }}" state=present
